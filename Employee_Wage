@@ -1,1 +1,10 @@
-echo "---------WelCome to Employee Wage Computation----------------------"
+echo "---------WelCome to Employee Wage   Computation----------------------"
+ Employee=$(($RANDOM%2));
+ echo $Employee;
+ if [ $Employee -eq 1 ]
+     then
+     echo "Employee is Present ";
+else 
+ echo "Employee is Absent ";
+
+ fi
