@@ -3,18 +3,21 @@ echo "---------WelCome to Employee Wage Computation----------------------"
  WagePerHour=20;
  FullDayHour=8;
  PartTimeHour=4;
+ DayInMonth=20;
 
   case $isPresent  in 
    1 ) 
   	echo "Employee is Present "
   	DailyEmployeeWage=$(($WagePerHour * $FullDayHour));
+    MonthlyWage=$(($DailyEmployeeWage * $DayInMonth))
 	echo $DailyEmployeeWage;
 	;;
 
    2 )
  	echo "Employee is PartTime Present"
  	DailyPartTimeWage=$(($PartTimeHour * $WagePerHour));
- 	echo "PartTime Employee Wage =$DailyPartTimeWage";
+  MonthlyWagePartTime=$(($DailyPartTimeWage * $DayInMonth))
+ 	echo "PartTime Monthly Employee Wage =$MonthlyWagePartTime";
  	;;
 
 	0 ) 
