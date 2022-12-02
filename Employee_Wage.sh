@@ -4,19 +4,22 @@ echo "---------WelCome to Employee Wage Computation----------------------"
  FullDayHour=8;
  PartTimeHour=4;
 
-  if [ $isPresent -eq 1 ]
-  then 
+  case $isPresent  in 
+   1 ) 
   	echo "Employee is Present "
   	DailyEmployeeWage=$(($WagePerHour * $FullDayHour));
 	echo $DailyEmployeeWage;
-elif [ $isPresent -eq 2 ]
- then
+	;;
+
+   2 )
  	echo "Employee is PartTime Present"
  	DailyPartTimeWage=$(($PartTimeHour * $WagePerHour));
- 	echo "PartTime Employee Wage =$DailyPartTimeWage"
-	#statements
-  else 
-  	echo "Employee is Absent "
+ 	echo "PartTime Employee Wage =$DailyPartTimeWage";
+ 	;;
 
-  fi
+	0 ) 
+  	echo "Employee is Absent "
+  	;;
+
+ esac
   
